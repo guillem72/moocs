@@ -7,8 +7,6 @@ package glluch.com.moocs;
 
 import com.glluch.utils.CsvWriter;
 import com.glluch.utils.Out;
-import com.google.gson.Gson;
-import java.util.ArrayList;
 import org.apache.commons.lang.StringUtils;
 
 /**

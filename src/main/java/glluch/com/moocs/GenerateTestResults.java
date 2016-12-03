@@ -28,6 +28,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.SerializationUtils;
 
 /**
@@ -36,24 +37,66 @@ import org.apache.commons.lang.SerializationUtils;
  */
 
 /**
- *
+ * Create a file with the desired result for the method in the name.
  * @author Guillem LLuch Moll
  */
 public class GenerateTestResults {
-      /**
-     * Create a file with the desired result for the method in the name.
-     * @throws IOException if the file couldn't be written or read.
-     */
+    
+    protected String origin= "tests/in/Data Mining Capstone.json";
+    protected String dirMoocs= "tests/in/moocs/";
+    protected String moocsIn="tests/in/moocsTxt/";
+   
+    
      public void IObuildMoocFromJsonResult() throws IOException {
       
         File target;
         target = new File("tests/IObuildMoocFromJsonResult.txt");
-        String origin= "tests/in/Data Mining Capstone.json";
+        //String origin= "tests/in/Data Mining Capstone.json";
         IO io=new IO();
         Mooc result0 = io.buildMoocFromJson(origin);
         String result = result0.toStringTest();      
         
         FileUtils.write(target, result);
     }
+     
+     
+     public void MooctestToString() throws IOException{
+         File target;
+         String name = new Object(){}.getClass().getEnclosingMethod().getName();
+         name="tests/"+name+"Result.txt";
+        target = new File(name);        
+        //String origin= "tests/in/Data Mining Capstone.json";
+        IO io=new IO();
+        Mooc result0 = io.buildMoocFromJson(origin);
+        String result = result0.toString();      
+        
+        FileUtils.write(target, result);
+     }
+     
+     public void IOBuildMoocsFromJsons() throws IOException{
+         File target;
+         String result0="";
+         int result;
+         String name = new Object(){}.getClass().getEnclosingMethod().getName();
+         name="tests/"+name+"Result.int";
+        target = new File(name);        
+        IO io=new IO();
+        io.setDirName(this.dirMoocs);
+        ArrayList<Mooc> moocs = io.buildMoocsFromJsons();
+        for (Mooc mooc:moocs){
+           result0+=mooc.toString();
+        }
+        result=result0.hashCode();
+        FileUtils.write(target, String.valueOf(result));
+     }
+     
+     public void IOtestWriteMoocs2txt() throws IOException{
+      System.out.println("IO writeMoocs2txt test result generator");
+        IO io = new IO();
+       
+        io.setDirName(this.dirMoocs);
+        ArrayList<Mooc> moocs = io.buildMoocsFromJsons();
+        io.writeMoocs2txt(moocs, this.moocsIn);
+     }
 
 }

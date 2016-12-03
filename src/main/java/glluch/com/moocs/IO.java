@@ -112,7 +112,7 @@ public class IO {
     }
 
     /**
-     * Reads every json in a directory and build an instance for every one.
+     * Reads every json in a directory and build a Mooc instance for every one.
      *
      * @return an ArrayList made by the objects create from the json files in a
      * directory
@@ -121,7 +121,7 @@ public class IO {
     public ArrayList<Mooc> buildMoocsFromJsons() throws IOException {
         ArrayList<Mooc> moocs = new ArrayList<>();
         SuffixFileFilter jsonsff = new SuffixFileFilter(".json");
-        Iterator<File> cfiles = FileUtils.iterateFiles(new File(dirName), jsonsff, null);
+        Iterator<File> cfiles = FileUtils.iterateFiles(new File(this.dirName), jsonsff, null);
         show("Reading directory with MOOCs");
 
         while (cfiles.hasNext()) {
@@ -139,6 +139,15 @@ public class IO {
         return moocs;
     }
 
+    /**
+     * Try to write a list of moocs in a csv file (for use in R quanteda, for example)
+     * It doesn't work properly beacuse there are issues with limits of text and tabs. 
+     * TODO: use a library as csv commons.
+     * @param moocs
+     * @param target
+     * @return
+     * @throws IOException
+     */
     public String writeMoocs2csv(List<Mooc> moocs, String target) throws IOException {
         String res = this.csvHeader;
         for (Object mooc0 : moocs) {
@@ -149,7 +158,14 @@ public class IO {
         return res;
 
     }
-
+    
+    /**
+     * Writes a txt for every mooc. That txt file contains the fields from Mooc toString() method
+     * @param moocs the list of moocs to be written.
+     * @param target the directory where the files will be written
+     * @throws IOException
+     * @see Mooc#toString() 
+     */
     public void writeMoocs2txt(List<Mooc> moocs, String target) throws IOException {
         for (Object mooc0 : moocs) {
 
@@ -160,15 +176,26 @@ public class IO {
             }
             FileUtils.write(new File(target + title + ".txt"), mooc.toString());
         }
+        show("Txt files written in "+target);
 
     }
 
+    /**
+     * Sent a message to the console depens on the parametre verbose. 
+     * If it is true (on), the text is shown.
+     * @param text The text to be shown
+     */
     protected void show(String text) {
         if (this.verbose) {
             Out.p(text);
         }
     }
 
+    /**
+     * Sent a message to the console depens on the parametre debug.
+     * If it is true (on), the text is shown.
+     * @param text The text to be shown
+     */
     protected void debug(String text) {
         if (this.debug) {
             Out.p(text);
