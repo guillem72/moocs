@@ -29,13 +29,12 @@ import org.apache.commons.lang.StringUtils;
 
 /**
  * This class contain a MOOC.
+ *
  * @author Guillem LLuch Moll
  */
 public class Mooc {
 
-    
     private String source;
-    
 
     public String getSource() {
         return this.source;
@@ -135,9 +134,8 @@ public class Mooc {
         this.subjects = subjects;
     }
 
-   
     //TODO handle this, because it could be a valuable metadata.
-    private  transient String instructors;
+    private transient String instructors;
 
     public String getInstructors() {
         return instructors;
@@ -146,13 +144,11 @@ public class Mooc {
     public void setInstructors(String instructors) {
         this.instructors = instructors;
     }
-    
-    
-    
-    protected  transient boolean debug=true;
-    
-    protected transient String emptySymbol="\"\"";
-   
+
+    protected transient boolean debug = true;
+
+    protected transient String emptySymbol = "\"\"";
+
     public String getEmptySymbol() {
         return emptySymbol;
     }
@@ -160,8 +156,8 @@ public class Mooc {
     public void setEmptySymbol(String emptySymbol) {
         this.emptySymbol = emptySymbol;
     }
-    
-    protected transient String csvFieldSep="\t";
+
+    protected transient String csvFieldSep = "\t";
 
     public boolean isDebug() {
         return debug;
@@ -178,98 +174,84 @@ public class Mooc {
     public void setCsvFieldSep(String csvFieldSep) {
         this.csvFieldSep = csvFieldSep;
     }
-    
-    
-    
-    
+
     public Mooc() {
-        
-    }    
-  
-    
-    
-   //End declarations, setter and getters
-    
-    @Override
-    public String toString(){
-     String info="";
-     if (StringUtils.isEmpty(this.title)){
-      debug("There is a mooc without title");
-     }
-     
-        if (StringUtils.isNotEmpty(this.getSubjects()))
-        {
-            
-            info+=StringUtils.normalizeSpace(this.getSubjects())+" ";
-        }
-          if (StringUtils.isNotEmpty(this.contents))
-        {
-            info+=StringUtils.normalizeSpace(this.contents)+" ";
-        }
-              if (StringUtils.isNotEmpty(this.description))
-        {
-            info+=StringUtils.normalizeSpace(this.description);
-        }       
-          
-     return info;
+
     }
-    
+
+    //End declarations, setter and getters
+    @Override
+    public String toString() {
+        String info = "";
+        if (StringUtils.isEmpty(this.title)) {
+            debug("There is a mooc without title");
+        }
+
+        if (StringUtils.isNotEmpty(this.getSubjects())) {
+
+            info += StringUtils.normalizeSpace(this.getSubjects()) + " ";
+        }
+        if (StringUtils.isNotEmpty(this.contents)) {
+            info += StringUtils.normalizeSpace(this.contents) + " ";
+        }
+        if (StringUtils.isNotEmpty(this.description)) {
+            info += StringUtils.normalizeSpace(this.description);
+        }
+
+        return info;
+    }
+
     /**
-     * Creates a line to put in a convinient csv. More precisely 
-     * title, text, source, language
-     * @return a line for a csv file with the order  title, text, source, language
+     * Creates a line to put in a convinient csv. More precisely title, text,
+     * source, language
+     *
+     * @return a line for a csv file with the order title, text, source,
+     * language
      * @see IO#csvHeader
      */
-    public String toCsv(){
-       
-        String res="";
-        
-         if (StringUtils.isNotEmpty(this.title))
-        {
-            res+="\""+CsvWriter.csvText(this.title.trim())+"\""+this.csvFieldSep;
+    public String toCsv() {
+
+        String res = "";
+
+        if (StringUtils.isNotEmpty(this.title)) {
+            res += "\"" + CsvWriter.csvText(this.title.trim()) + "\"" + this.csvFieldSep;
+        } else {
+            debug("There is a mooc without title");
+            res += this.emptySymbol + this.csvFieldSep;
         }
-         else {
-             debug("There is a mooc without title");
-             res+=this.emptySymbol+this.csvFieldSep;
-         }
-         
-         res+="\""+this.toString()+"\" ,";
-         
-         if (StringUtils.isNotEmpty(this.source))
-        {
-            res+="\""+CsvWriter.csvText(this.source)+"\""+this.csvFieldSep;
+
+        res += "\"" + this.toString() + "\" ,";
+
+        if (StringUtils.isNotEmpty(this.source)) {
+            res += "\"" + CsvWriter.csvText(this.source) + "\"" + this.csvFieldSep;
+        } else {
+            res += this.emptySymbol + this.csvFieldSep;
         }
-          else {
-             res+=this.emptySymbol+this.csvFieldSep;
-         }
-        
-        if (StringUtils.isNotEmpty(this.language))
-        {
-            res+="\""+CsvWriter.csvText(this.language)+"\""+this.csvFieldSep;
+
+        if (StringUtils.isNotEmpty(this.language)) {
+            res += "\"" + CsvWriter.csvText(this.language) + "\"" + this.csvFieldSep;
+        } else {
+            res += this.emptySymbol + this.csvFieldSep;
         }
-         else {
-             res+=this.emptySymbol+this.csvFieldSep;
-         }
-        
-        
-        
+
         return res;
     }
-    
-      /**
+
+    /**
      * A method for serizalize the object as an String.
+     *
      * @return an string as a result of concatenate all the fields.
-     */    
-    public String toStringTest(){
-    String res=null;
-    res+=this.title+" "+this.description+" "+this.contents+" "+this.source+" ";
-    res+=this.effort+" "+this.language+" "+this.url+" "+this.subjects;
-    return res;
+     */
+    public String toStringTest() {
+        String res = null;
+        res += this.title + " " + this.description + " " + this.contents + " " + this.source + " ";
+        res += this.effort + " " + this.language + " " + this.url + " " + this.subjects;
+        return res;
     }
-    
-      protected void debug(String text){
-        if (this.debug){
-        Out.p(text);
+
+    protected void debug(String text) {
+        if (this.debug) {
+            Out.p(text);
         }
     }
 }
