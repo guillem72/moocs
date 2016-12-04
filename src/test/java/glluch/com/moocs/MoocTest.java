@@ -30,23 +30,21 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Rule;
 
-
 /**
  *
  * @author Guillem LLuch Moll <guillem72@gmail.com>
  */
 public class MoocTest {
- 
-    protected String textFileName="tests/in/Data Mining Capstone.json";
-    
+
+    protected String textFileName = "tests/in/Data Mining Capstone.json";
+
     public MoocTest() {
-        
+
     }
 
-    
-    
     /**
      * Test of toString method, of class Mooc.
+     *
      * @throws java.io.IOException
      */
     @Test
@@ -55,28 +53,24 @@ public class MoocTest {
         IO io = new IO();
         Mooc mooc = io.buildMoocFromJson(this.textFileName);
         File target = new File("tests/MooctestToStringResult.txt");
-        String expResult=FileUtils.readFileToString(target);
+        String expResult = FileUtils.readFileToString(target);
         String result = mooc.toString();
         assertEquals(expResult, result);
-        
+
     }
 
     /*
      * Test of toCsv method, of class Mooc.
     
-    @Test
-    public void testToCsv() {
-        System.out.println("toCsv");
-        Mooc instance = new Mooc();
-        String expResult = "";
-        String result = instance.toCsv();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+     @Test
+     public void testToCsv() {
+     System.out.println("toCsv");
+     Mooc instance = new Mooc();
+     String expResult = "";
+     String result = instance.toCsv();
+     assertEquals(expResult, result);
+     // TODO review the generated test code and remove the default call to fail.
      
-    }
+     }
      */
-
-  
-  
-    
 }

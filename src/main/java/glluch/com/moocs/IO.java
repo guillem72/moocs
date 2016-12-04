@@ -28,16 +28,12 @@ import com.glluch.utils.Out;
 import com.google.gson.Gson;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.SuffixFileFilter;
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang3.Validate;
 
 /**
  * This class is for read and write specific files.
@@ -158,9 +154,10 @@ public class IO {
     }
 
     /**
-     * Try to write a list of moocs in a csv file (for use in R quanteda, for example)
-     * It doesn't work properly beacuse there are issues with limits of text and tabs. 
-     * TODO: use a library as csv commons.
+     * Try to write a list of moocs in a csv file (for use in R quanteda, for
+     * example) It doesn't work properly beacuse there are issues with limits of
+     * text and tabs. TODO: use a library as csv commons.
+     *
      * @param moocs
      * @param target
      * @return
@@ -176,13 +173,15 @@ public class IO {
         return res;
 
     }
-    
+
     /**
-     * Writes a txt for every mooc. That txt file contains the fields from Mooc toString() method
+     * Writes a txt for every mooc. That txt file contains the fields from Mooc
+     * toString() method
+     *
      * @param moocs the list of moocs to be written.
      * @param target the directory where the files will be written
      * @throws IOException
-     * @see Mooc#toString() 
+     * @see Mooc#toString()
      */
     public void writeMoocs2txt(List<Mooc> moocs, String target) throws IOException {
         for (Object mooc0 : moocs) {
@@ -190,17 +189,18 @@ public class IO {
             Mooc mooc = (Mooc) mooc0;
             String title = mooc.getTitle();
             if (StringUtils.isEmpty(title)) {
-                
+
             }
             FileUtils.write(new File(target + title + ".txt"), mooc.toString());
         }
-        show("Txt files written in "+target);
+        show("Txt files written in " + target);
 
     }
 
     /**
-     * Sent a message to the console depens on the parametre verbose. 
-     * If it is true (on), the text is shown.
+     * Sent a message to the console depens on the parametre verbose. If it is
+     * true (on), the text is shown.
+     *
      * @param text The text to be shown
      */
     protected void show(String text) {
@@ -210,8 +210,9 @@ public class IO {
     }
 
     /**
-     * Sent a message to the console depens on the parametre debug.
-     * If it is true (on), the text is shown.
+     * Sent a message to the console depens on the parametre debug. If it is
+     * true (on), the text is shown.
+     *
      * @param text The text to be shown
      */
     protected void debug(String text) {
