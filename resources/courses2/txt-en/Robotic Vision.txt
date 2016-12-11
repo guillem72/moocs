@@ -1,0 +1,1 @@
+Robotic Vision introduces you to the field of computer vision and the mathematics and algorithms that underpin it.You’ll learn how to interpret images to determine the color, size, shape and position of objects in the scene.We’ll work with you to build an intelligent vision system that can recognise objects of different colours and shapes.

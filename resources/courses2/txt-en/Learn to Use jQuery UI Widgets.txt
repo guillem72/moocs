@@ -1,0 +1,1 @@
+A jQuery UI Tutorial that will show you how to use tabs, accordion, datepicker and more without having to learn jQuery!

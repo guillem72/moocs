@@ -1,0 +1,1 @@
+New PDO Database class wrapper, Custom Exception Handler and use of Namespaces (3rd add-on for E-commerce series)

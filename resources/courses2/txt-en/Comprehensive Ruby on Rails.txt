@@ -1,0 +1,1 @@
+This is a comprehensive Ruby on Rails development course created for individuals who want to build powerful web apps.

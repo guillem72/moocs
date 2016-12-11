@@ -1,0 +1,1 @@
+Learn some of the main tools used in statistical modeling and data science. We cover both traditional as well as exciting new methods, and how to use them in R.

@@ -1,0 +1,1 @@
+This Drupal training course will take you through the process of learning drupal and building a flexible website.

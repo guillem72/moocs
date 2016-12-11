@@ -1,0 +1,1 @@
+This course will guide you through the process of creating a 2D game that runs neatly on all Android devices.

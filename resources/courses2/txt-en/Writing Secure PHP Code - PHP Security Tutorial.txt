@@ -1,0 +1,1 @@
+Create secure PHP code and prevent attacks and exploits in your code - This is an Essential course for all developers

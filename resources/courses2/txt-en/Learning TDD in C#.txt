@@ -1,0 +1,1 @@
+So you want to use TDD in C#, but don’t know where to start? This course is all about figuring out how this TDD thing works, presenting it in such a way that even a rookie could understand. Excited to get started?

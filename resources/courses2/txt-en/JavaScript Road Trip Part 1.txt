@@ -1,0 +1,1 @@
+An introduction to the very basics of the JavaScript language. Build a foundation of JavaScript syntax and learn how to use values, variables, and files.

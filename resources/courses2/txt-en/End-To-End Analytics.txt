@@ -1,0 +1,1 @@
+We’ll begin by creating an analytics dashboard for a fictional e-commerce company. On the web server side, we’ll use ExpressJS, MongoDB, NPM and NodeJS. For the client side of things, we’ll be using EmberJS, RequireJS, D3 and jQueryUI to build the various components of the dashboard.

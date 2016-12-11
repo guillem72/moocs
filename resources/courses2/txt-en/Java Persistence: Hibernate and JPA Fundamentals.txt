@@ -1,0 +1,1 @@
+A simple-to-follow and easy-to-understand training course on Java Persistence with JPA by Example

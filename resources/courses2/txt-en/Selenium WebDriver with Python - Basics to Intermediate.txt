@@ -1,0 +1,1 @@
+Learn step by step how to automate web applications using selenium webdriver with an easy to learn programming language.

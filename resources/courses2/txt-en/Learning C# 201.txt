@@ -1,0 +1,1 @@
+C# has changed a lot throughout the years, with each version bringing more to the table than the one previous. Let’s take a look at each version and follow how the language progressed.

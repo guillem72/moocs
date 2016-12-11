@@ -1,0 +1,1 @@
+Embedding videos on your website isn’t as difficult as it used to be, but there are still some tricks of the trade to do things efficiently. How? By using HTML5 and JavaScript, of course.

@@ -1,0 +1,1 @@
+Everything you need to know to confidentally start writing your own macros to automate Microsoft Word processes.

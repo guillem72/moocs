@@ -30,6 +30,11 @@
             <version>2.6</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>com.glluch</groupId>
+            <artifactId>findTerms</artifactId>
+            <version>28032016</version>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

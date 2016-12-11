@@ -1,0 +1,1 @@
+A step-by-step guide on building a merger model (accretion/dilution model) based on TTS’s courses at Wall Street firms.

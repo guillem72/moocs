@@ -1,0 +1,1 @@
+In Database Foundations we’ll look into the ins and outs of databases. Databases can store massive amounts of information to be retrieved at a later date. Databases act as the memory for dynamic web sites or mobile apps.

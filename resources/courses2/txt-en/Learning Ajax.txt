@@ -1,0 +1,1 @@
+Ajax can be a bit daunting at first, so in this course you learn by doing. Here you build a simple Ajax library, tweak it a bit for various scenarios then deploy a basic hands-on application.

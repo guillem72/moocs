@@ -1,0 +1,1 @@
+Learn how to build a fully functional E-commerce website with Object Oriented PHP, MySQL, jQuery and PayPal.

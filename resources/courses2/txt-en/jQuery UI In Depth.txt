@@ -1,0 +1,1 @@
+Hands-on guide for learning the user interface interactions, widgets, effects, utilities and themes that make jQuery UI

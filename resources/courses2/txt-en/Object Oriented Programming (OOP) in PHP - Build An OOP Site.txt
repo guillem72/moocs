@@ -1,0 +1,1 @@
+No PHP knowledge required. Everything you need to know to build and manage OOP websites in PHP, including Wordpress

@@ -1,0 +1,1 @@
+This course will teach you all you need to know in order to build high quality Web Applications in Ruby on Rails 4.0.

@@ -1,0 +1,1 @@
+Swift is a new programming language created by Apple to program iOS apps. If you are new to programming or to Swift then this course is for you. Learn about programming concepts like: variables, types, collections and control structures. Towards the end of the course we will learn to program a FizzBuzz generator applying everything we have learned in the course.

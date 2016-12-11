@@ -1,0 +1,1 @@
+In this course, Andrew Burgess will teach you the essentials of querying databases, using SQL.

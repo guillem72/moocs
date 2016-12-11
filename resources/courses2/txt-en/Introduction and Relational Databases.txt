@@ -1,0 +1,1 @@
+This mini-course provides a general introduction to databases, and introduces the popular relational data model.

@@ -1,0 +1,1 @@
+ASP.NET is a powerful and flexible web platform, capable of running simple sites, enterprise-class applications and web services. Let’s examine three programming models and learn the basics in this course.

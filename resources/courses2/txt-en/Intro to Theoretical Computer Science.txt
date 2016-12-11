@@ -1,0 +1,1 @@
+This class teaches you about basic concepts in theoretical computer science -- such as NP-completeness -- and what they imply for solving tough algorithmic problems.

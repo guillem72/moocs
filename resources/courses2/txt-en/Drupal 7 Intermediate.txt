@@ -1,0 +1,1 @@
+Take your Drupal knowledge to the next level. Learn all about content types, Views and Panels.

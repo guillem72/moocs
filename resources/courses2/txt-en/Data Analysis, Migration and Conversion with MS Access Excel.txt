@@ -1,0 +1,1 @@
+Learn how to extract the data from one application, modify and process it using business rules and load it to another

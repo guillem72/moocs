@@ -1,0 +1,1 @@
+In one hour, learn the complete process of reskinning an iOS app using XCode, from the first test to final submission.

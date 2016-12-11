@@ -1,0 +1,1 @@
+Continue building intermediate skills within the JavaScript web programming language. Master function expressions, closures, hoisting, objects, and the use of prototypes.

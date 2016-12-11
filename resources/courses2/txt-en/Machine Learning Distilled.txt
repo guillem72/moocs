@@ -1,0 +1,1 @@
+Welcome to Machine Learning Distilled. In this course, Kenan Casey reviews machine learning, and takes you through some important concepts, distilled. In other words, what is machine learning, why would you want to do it, and how is it done?

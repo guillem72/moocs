@@ -1,0 +1,1 @@
+Admins: meet Windows 8. In this course, author Steve Fullmer explains the differences between the many versions of Windows 8, and then dives into basic desktop navigation. He reviews a standard Windows 8 image file (a .wim file), provides an overview of the boot process, and discusses fast boot, disk management, driver management, and the Windows 8 file system.

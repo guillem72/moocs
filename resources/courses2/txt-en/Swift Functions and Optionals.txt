@@ -1,0 +1,1 @@
+Functions and Optionals are used widely in Swift. In this course we will look into the basics of what is a function and why you should use it. We then dive deeper and look at function parameters, return types and tuples. Finally, you will learn one of the most fundamental concepts in Swift known as Optionals.

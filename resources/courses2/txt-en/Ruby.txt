@@ -1,0 +1,1 @@
+Ruby is a powerful and expressive language with intuitive syntax. If you're unsure of which programming language to learn, Ruby is a great choice. The language can be used in a variety of disciplines, including application, game, and web development, and currently enjoys widespread popularity via the Ruby on Rails web framework. Courses are based on Ruby 1.9.3.

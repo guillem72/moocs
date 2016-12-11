@@ -1,0 +1,1 @@
+A continued introduction to the very basics of the JavaScript language. Learn common programming mechanisms like loops, conditionals, functions, and arrays.

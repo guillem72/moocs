@@ -1,0 +1,1 @@
+This course will give a person with no prior experience the basic tools necessary to create a PLC program from scratch.

@@ -1,0 +1,1 @@
+Introduction to Computer Science for a zero-prior-experience audience. Play with little phrases of code to understand what computers are all about.

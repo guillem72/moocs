@@ -1,0 +1,1 @@
+Python is a powerful and expressive language that has very simple syntax. If you're unsure of which programming language to learn, Python is a great choice. The language is used in a variety of disciplines: application, web, and game development. Python can do it all. Courses are based on Python 2.7.3.
